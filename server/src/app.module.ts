@@ -5,6 +5,10 @@ import { AuthModule } from './modules/auth/auth.module';
 import { TransactionModule } from './modules/transaction/transaction.module';
 import { ConfigModule } from '@nestjs/config';
 
+
+@Module({
+  imports: [MongooseModule.forRoot('mongodb://localhost/nest')],
+})
 @Module({
   imports: [
     AuthModule,
