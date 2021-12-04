@@ -31,6 +31,7 @@ export function useMutateRegisterUser() {
       const data = new FormData();
       data.append("email", user.email);
       data.append("password", user.password);
+      data.append("balance", "100");
       return apiService.post(`user/register`, data);
     },
     {
